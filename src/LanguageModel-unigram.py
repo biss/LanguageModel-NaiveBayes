@@ -129,13 +129,8 @@ def evaluate_model(test_corpus):
             prob_fra = Decimal(prob_fra * 1) / Decimal(countOfWord_fra + len(test_corpus_r))
             #print(prob_fra)
             #print "%s is not found in french" %word
-    
-    print "probability score of eng, german and french"
-    print(prob_eng)
-    print(prob_deu)
-    print(prob_fra)
-    
-    print "normalised probability of eng, german and french"
+
+    print "final probability of eng, german and french"
     print(Decimal(prob_eng) / Decimal(prob_eng + prob_deu + prob_fra))
     print(Decimal(prob_deu) / Decimal(prob_eng + prob_deu + prob_fra))
     print(Decimal(prob_fra) / Decimal(prob_eng + prob_deu + prob_fra))
